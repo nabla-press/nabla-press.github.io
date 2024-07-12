@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Facts about <a knowl="defs/linear-subspace.html">subspaces</a>.
+</p>
+<ul>
+<li>
+<i>Subspace criterion:</i> let \(W\subseteq V\) be nonempty.
+If both
+\(\alpha, \beta\in\mathbf F\) and \(u, v\in W\) implies
+\[\alpha u + \beta v\in W,\]
+then \(W\) is a subspace of \(V\).
+<details>
+<summary>
+[explanation]
+</summary>
+<p>
+Suppose both 
+\(\alpha, \beta\in\mathbf F\) and \(u, v\in W\) implies
+\(\alpha u + \beta v\in W\).
+</p>
+<p>
+We now check the vector space axioms.
+</p>
+<ol>
+<li>
+Let \(a, b, c\in W\). Then since \(W\subseteq V\), we have \(a, b, c\in V\),
+hence \(a + (b + c) = (a + b) + c\).
+</li>
+<li>
+Let \(w\in W\). Then since \(1, -1\in\mathbf F\),
+we have \[1w + (-1)w = w + (-1)w = w + (-w) = 0\in W.\]
+Furthermore, since \(W\subseteq V\), \(w\in V\), hence
+\(w + 0 = w = 0 + w\).
+</li>
+<li>
+Let \(w\in W\). Then since \(0, -1\in\mathbf F\),
+we have
+\[0w + (-1)w = 0 + (-1)w = (-1)w = -w\in W.\]
+Furthermore, since \(W\subseteq V\), \(w\in V\), hence
+\[w + (-w) = 0 = (-w) + w.\]
+</li>
+<li>
+Let \(a, b\in W\). Then since \(W\subseteq V\), we have \(a, b\in V\),
+hence \(a + b = b + a\).
+</li>
+<li>
+Let \(v\in W\). Then since \(W\subseteq V\), we have \(v\in V\),
+hence \(1v = v\).
+</li>
+<li>
+Let \(\alpha, \beta\in\mathbf F\), \(v\in W\). Then since \(W\subseteq V,\)
+we have \(v\in V\), hence \(\alpha(\beta v) = (\alpha\beta)v\).
+</li>
+<li>
+Let \(\alpha,\beta\in\mathbf F\), \(u, v\in W\). Then since \(W\subseteq V\),
+we have \(u, v\in V\), hence
+\[\alpha(u + v) = \alpha u + \alpha v\qquad\text{and}\qquad
+(\alpha + \beta)v = \alpha v + \beta v.\]
+</li>
+</ol>
+</details>
+</li>
+<li>
+The trivial space \(\{0\}\) and \(V\) itself are both subspaces of \(V\).
+<details>
+<summary>
+[explanation]
+</summary>
+<p>
+Notice that \(\{0\}\) and \(V\) are both subsets of \(V\).
+</p>
+<p>
+We checked that \(\{0\}\) is a
+vector space <a knowl="misc/trivial-space.html">here</a>,
+and \(V\) is a vector space by assumption.
+</p>
+</details>
+</li>
+<li>
+The (arbitrary) intersection of any nonempty set of subspaces of \(V\)
+is another subspace of \(V\).
+<details>
+<summary>
+[explanation]
+</summary>
+<p>
+Let \(\{X_\iota\}_{\iota\in I}\) be a nonempty set of subspaces of \(V\).
+Suppose \(\alpha, \beta\in\mathbf F\)
+and \(u, v\in \bigcap_{\iota\in I} X_\iota\).
+Then \(u, v\in X_\iota\) for all \(\iota\in I\), hence
+\(\alpha u + \beta v\in X_\iota\) for all \(\iota\in I\),
+hence \(\alpha u + \beta v\in \bigcap_{\iota\in I}X_\iota\).
+</p>
+</details>
+</li>
+</ul>
+</body>
+</html>

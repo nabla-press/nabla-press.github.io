@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<p>
+The following are consequences of the <a knowl="defs/field.html">field axioms</a>:
+<ol>
+<li>
+The additive identity 0 and multiplicative identity 1 are unique.
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose \(0'\) is another additive identity. Then
+\(0 = 0 + 0' = 0'\).
+<br/>
+Similarly, suppose \(1'\) is another multiplicative identity. Then
+\(1 = 11' = 1'\).
+</details>
+</li>
+<li>
+Every \(a\in F\) has a unique additive inverse (denoted \(-a\)),
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose \(b\) and \(b'\) are both additive inverses of \(a\).
+Then 
+\[b = b + 0 = b + (a + b') = (b + a) + b' = 0 + b' = b'.\]
+</details>
+and every
+nonzero \(b\in F\) has a unique multiplicative inverse (denoted \(b^{-1}\)).
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose \(b\) and \(b'\) are both multiplicative inverses of \(a\).
+Then 
+\[b = b1 = b(ab') = (ba)b' = 1b' = b'.\]
+</details>
+</li>
+<li>
+The additive cancellation law holds: \(\forall a, b, c\in F\) we have
+\[a + c = b + c \implies a = b.\]
+<details>
+<summary>
+[explanation]
+</summary>
+By direct computation:
+\[
+\begin{align*}
+a &= a + 0 = a + (c + (-c)) = (a + c) + (-c)\\
+&= (b + c) + (-c) = b + (c + (-c)) = b + 0 = b.
+\end{align*}
+\]
+</details>
+<li>
+The multiplicative cancellation law holds: \(\forall a, b, c\in F\) we have
+\[ac = bc\;\;\text{and}\;\; c\ne 0\implies a = b.\]
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose \(ac = bc\) and \(c\ne 0\). Then \(c\) has a multiplicative inverse,
+and thus 
+\[a = a1 = a(cc^{-1}) = (ac)c^{-1} = (bc)c^{-1} = b(cc^{-1}) = b1 = b.\]
+</details>
+</li>
+<li>
+Zero annihilates all elements of \(F\):
+\(\forall a\in F\) we have \(0a = 0\).
+<details>
+<summary>
+[explanation]
+</summary>
+Note that 
+\(0 + 0a = 0a = (0 + 0)a = 0a + 0a\), so by the additive cancellation
+law we have \(0a = 0\).
+</details>
+</li>
+<li>
+We have \(-a = (-1)a\) for all \(a\in F\).
+<details>
+<summary>
+[explanation]
+</summary>
+By direct computation:
+\[
+\begin{align*}
+-a &= -a + 0 = -a + 0a\\
+&= -a + (1 + (-1))a = -a + (1a + (-1)a)\\
+&= (-a + 1a) + (-1)a = (-a + a) + (-1)a = 0 + (-1)a = (-1)a.
+\end{align*}\]
+</details>
+</li>
+<li>We have \(ab = 0\) if and only if either \(a = 0\) or \(b = 0\).
+<details>
+<summary>
+[explanation]
+</summary>
+For the first direction, suppose \(ab = 0\) and \(a\ne 0\). Then
+\(a\) has a multiplicative inverse, and so
+\[b = 1b = (a^{-1}a)b = a^{-1}(ab) = a^{-1}0 = 0.\]
+For the second direction, suppose either \(a = 0\) or \(b = 0\).
+If \(a = 0\), then \(ab = 0b = 0\), while if 
+\(b = 0\), then \(ab = 0a = 0\). So, either way, \(ab = 0\).
+</details>
+</li>
+</ol>
+</body>
+</html>

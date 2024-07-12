@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<p>
+The following are easy consequences of the
+<a knowl="defs/vector-space.html">vector space axioms</a>:
+<ol>
+<li>
+The origin 0 is unique.
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose \(0'\) is another origin. Then
+\(0 = 0 + 0' = 0'\).
+</details>
+</li>
+<li>
+Every \(v\in V\) has a unique additive inverse (denoted \(-v\)).
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose \(w\) and \(w'\) are additive inverses of $v$. Then
+\[w = w + 0 = w + (v + w') = (w + v) + w' = 0 + w' = w'.\]
+</details>
+</li>
+<li>
+The additive cancellation law holds: \(\forall u, v, w\in V\) we have
+\[u + w = v + w \implies u = v.\]
+<details>
+<summary>
+[explanation]
+</summary>
+By direct computation:
+\[\begin{align*}
+u &= u + 0 = u + (w + (-w)) = (u + w) + (-w)\\
+&= (v + w) + (-w) = v + (w + (-w)) = v + 0 = v.
+\end{align*}
+\]
+</details>
+</li>
+<li>
+We have \(0v = 0\) for every \(v\in V\).
+<details>
+<summary>
+[explanation]
+</summary>
+Computing, we find
+\[0 + 0v = 0v = (0 + 0)v = 0v + 0v\]
+so the result follows from the additive cancellation law.
+</details>
+</li>
+<li>
+We have \(\alpha 0 = 0\) for every \(\alpha\in\mathbf F\).
+<details>
+<summary>
+[explanation]
+</summary>
+Computing, we find
+\[0 + \alpha 0 = \alpha(0 + 0) = \alpha 0 + \alpha 0\]
+so the result follows from the additive cancellation law.
+</details>
+</li>
+<li>
+We have \((-1)v = -v\) for every \(v\in V\).
+<details>
+<summary>
+[explanation]
+</summary>
+By direct computation:
+\[\begin{align*}
+(-1)v &= (-1)v + 0 = (-1)v + (v + (-v))\\
+&= (-1)v + (1v + (-v)) = ((-1)v + 1v) + (-v)\\
+&= (-1 + 1)v + (-v) = 0v + (-v) = 0 + (-v) = -v
+\end{align*}\]
+</details>
+</li>
+<li>
+We have \(\alpha v = 0\) implies either \(\alpha = 0\) or \(v = 0\).
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose \(\alpha v = 0\) and that \(\alpha\ne 0\). Then 
+\[v = 1v = (\alpha^{-1}\alpha)v
+= \alpha^{-1}(\alpha v) = \alpha^{-1}0 = 0.\]
+</details>
+</li>
+</ol>
+</body>
+</html>
