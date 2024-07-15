@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(\{W_i\}_{i=1}^n\) be a
+finite set of
+<a knowl="defs/vec/sub">subspaces</a> of a vector space \(V\).
+</p>
+<p>
+The <b>sum</b> of these subspaces is
+\[\sum_{i=1}^nW_i := \left\{\sum_{i=1}^nw_i: w_i\in W_i\right\}.\]
+</p>
+<p>
+This forms a subspace of \(V\).
+<details>
+<summary>
+[explanation]
+</summary>
+Let \(\alpha, \beta\in\mathbf F\) and let \(u, v\in\sum_{i=1}^nW_i\).
+Write \(u = \sum_{i=1}^nu_i, v = \sum_{i=1}^nv_i\)
+where \(u_i, v_i\in W_i\).
+Then
+\[\alpha u + \beta v = \alpha\sum_{i=1}^nu_i + \beta\sum_{i=1}^nv_i
+= \sum_{i=1}^n(\alpha u_i + \beta v_i).\]
+Since each \(W_i\) is a subspace,
+we have \(\alpha u_i + \beta v_i\in W_i\).
+Hence, \(\alpha u + \beta v\in\sum_{i=1}^nW_i\).
+</details>
+</p>
+<p>
+The sum \(\sum_{i=1}^nW_i\) is called a <b>direct sum</b>
+\[(\text{and written}\;\bigoplus_{i=1}^nW_i)\]
+if the only way to express 0 is with
+\((w_1,\dots,w_n) = (0,\dots,0)\).
+</p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(V\) be a vector space.
+A <b>linear combination</b> of elements of a nonempty finite
+subset \(X\subseteq V\)
+is a vector of the form
+\[v = \sum_{i = 1}^{|X|}\alpha_ix_i\]
+where \(\alpha_i\in\mathbf F\) for \(i\in\{1,\dots,|X|\}\).
+</p>
+</body>
+</html>

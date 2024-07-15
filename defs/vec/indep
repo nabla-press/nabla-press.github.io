@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<p>
+Let \(X\) be a nonempty subset of a vector space \(V\).
+We say \(X\) is
+<b>linearly dependent</b>
+if \[\sum_i\alpha_ix_i = 0\] for some \(\alpha_i\in\mathbf F\)
+where not all \(\alpha_i\) are 0, and <b>linearly independent</b>
+otherwise.
+</p>
+</body>
+</html>
