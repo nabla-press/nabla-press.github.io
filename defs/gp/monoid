@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+A <b>monoid</b> is a <a knowl="defs/gp/semigroup">semigroup</a>
+\((M, \circ)\) with an element \(\def\id{\text{id}}\id_G\),
+called an <b>identity element</b>, such that
+\[g\circ\id_G = g = \id_G\circ g\]
+for all \(g\in G\).
+</p>
+<p>
+The identity element \(\id_G\) is unique.
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose there
+were another identity element \(\widetilde\id_G\). Then
+\[\widetilde\id_G = \widetilde\id_G\circ\id_G = \id_G.\]
+</details>
+</p>
+</body>
+</html>

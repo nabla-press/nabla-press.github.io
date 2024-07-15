@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+A <b>group</b> is a <a knowl="defs/gp/monoid">monoid</a>
+\((G, \circ,\,\id_G)\) such that every element has an inverse.
+</p>
+<p>
+Related: <a knowl="facts/gp/group"
+>consequences of the group definition</a>.
+</p>
+</body>
+</html>

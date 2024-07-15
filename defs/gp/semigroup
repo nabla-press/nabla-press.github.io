@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+A <b>semigroup</b> is a <a knowl="defs/gp/magma">magma</a>
+\((X, \circ)\) such that \(\circ\) is associative.
+</p>
+</body>
+</html>
