@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+
+ _   _           _           __  __       _   _     
+| | | |_   _  __| |_ __ __ _|  \/  | __ _| |_| |__  
+| |_| | | | |/ _` | '__/ _` | |\/| |/ _` | __| '_ \ 
+|  _  | |_| | (_| | | | (_| | |  | | (_| | |_| | | |
+|_| |_|\__, |\__,_|_|  \__,_|_|  |_|\__,_|\__|_| |_|
+       |___/                                        
+
+"it's more fun to compute" -- Kraftwerk, 1980
+
+-->
+<title>HydraMath</title>
+
+<!-- MathJax -->
+<script async src="https://cdn.jsdelivr.net/
+npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<!-- jquery -->
+<script type="text/javascript"
+src="https://code.jquery.com/jquery-latest.min.js"></script> 
+
+<!-- knowls -->
+<link href="https://aimath.org/knowlstyle.css"
+rel="stylesheet" type="text/css" /> 
+<script type="text/javascript"
+src="https://aimath.org/knowl.js"></script>
+
+<!-- for mobile viewing -->
+<meta name="viewport" content="width=100%, initial-scale=1.0">
+
+<!-- CSS -->
+<style>
+
+html {
+padding: 1cm;
+font-size: 1.2em;
+}
+
+details {
+border:2px solid #ccc;
+border-radius: 4px;
+background-color: #eee;
+margin: 0.5em;
+padding: 0.5em;
+}
+
+ol, ul {
+line-height: 1.5em;
+}
+
+hr {
+border: 2px solid #ddd;
+}
+
+a {
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<!-- TeX definitions -->
+<h1 style="font-size: 2.5em">
+<i>HydraMath</i>
+\(
+\def\Hom{\text{Hom}}\def\End{\text{End}}
+\def\Aut{\text{Aut}}
+\def\Alt{\text{Alt}}
+\def\Sym{\text{Sym}}
+\def\Span{\text{Span}}
+\def\LC{\text{LC}}
+\def\GL{\text{GL}}
+\def\id{\text{id}}
+\def\tr{\text{tr}}
+\def\inv{^{-1}}
+\def\To{\longrightarrow}
+\)
+</h1>
+
+<!-- navigation -->
+<p style="color: #bbb;"> <a href="#i">vector spaces</a>
+&#10132; <a href="#ii">groups</a>
+&#10132; <a href="#iii">rings</a>
+&#10132; <a href="#iv">modules and algebras</a>
+&#10132; <a href="#v">field extns</a>
+&#10132; <a href="#vi">repns</a>
+</p>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="i">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>vector spaces</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+In linear algebra there are <i>vectors</i> and <i>scalars</i>.
+<ul>
+<li>
+A vector is an element of a
+<a knowl="defs/vec/space">vector space</a>
+over a given <a knowl="defs/vec/field">field</a>,
+</li>
+<li>
+whereas a scalar is an element of the field itself.
+</li>
+</ul>
+</li>
+<li>
+The set \(\{0\}\) is a vector space,
+known as the <a knowl="facts/vec/trivial">trivial space</a>.
+</li>
+<li>
+Any vector space \(V\) has a set of
+<a knowl="defs/vec/sub">subspaces</a>.
+<ul>
+<li>
+One can form 
+<a knowl="defs/vec/sum">direct sums</a>
+and <a knowl="defs/vec/quotient">quotients</a> of subspaces.
+</li>
+</ul>
+</li>
+<li>
+Any nonempty subset \(X\) of a vector space \(V\) generates a subspace
+of \(V\), called the <a knowl="defs/vec/span">span</a> of \(X\).
+</li>
+<li>
+Every vector space has a <a knowl="defs/vec/basis">basis</a>,
+and hence a <a knowl="defs/vec/dim">dimension</a>.
+</li>
+<li>
+Between any two vector spaces \(V\) and \(W\), there is
+a set of <a knowl="defs/vec/map">linear maps</a>,
+denoted \(\Hom(V, W)\).
+<ul>
+<li>
+<a knowl="facts/vec/hom">This forms a vector space.</a>
+</li>
+<li>
+If \(V = W\), we denote \(\Hom(V, W)\) by \(\End(V)\).
+</li>
+<li>
+The set of automorphisms of \(V\) (bijective linear maps
+from \(V\) to \(V\)) is denoted \(\Aut(V)\).
+</li>
+<li>
+If \(W = \mathbf F\), we denote \(\Hom(V, W)\) by \(V^*\)
+and call this space the <i>dual space</i> of \(V\).
+</li>
+</ul>
+</li>
+<li>Every linear map has a <a knowl="defs/vec/kernel">kernel</a>
+and an <a knowl="defs/vec/image">image</a>.</li>
+<li>
+The
+<a knowl="facts/vec/universal-sub"
+>universal property of subspaces</a>
+is dual to the
+<a knowl="facts/vec/universal-quotient"
+>universal property of quotient spaces</a>.
+</li>
+<li>
+The rank-nullity theorem is a corollary of canonical decomposition
+(also known as the <i>first isomorphism theorem</i>),
+which is itself
+a corollary of the universal property of quotient spaces.
+</li>
+<li>
+Bilinear maps on the Cartesian product \(V\times W\) are
+the same thing as linear maps on the tensor product \(V\otimes W\).
+</li>
+<li>
+The tensor algebra \(T^\bullet(V)\)
+is:
+\[T^\bullet(V) := \bigoplus_{k\ge 0}T^k(V)\]
+where \(T^0(V) = \mathbf F,\; T^1(V) = V,\;
+T^2(V) = V\otimes V,\;
+T^3(V) = V\otimes V\otimes V,\;\dots\)
+</li>
+<li>
+The alternating algebra \(\Alt^\bullet(V)\)
+(where \(V\) has dimension \(n\)) is
+\[\Alt^\bullet(V) := \bigoplus_{k= 0}^n\Alt^k(V)\]
+where \(\Alt^0(V) = \mathbf F,\;\Alt^1(V) = V,\;
+\Alt^k(V) = \{x_1\wedge\cdots\wedge x_k : x_i\in V\}\).
+Here, \(\wedge\) is the <a knowl="defs/vec/wedge">wedge product</a>.
+</li>
+<li>
+The map \(T\in\End(V)\) induces a linear map
+\[\Lambda^nT\in\End(\Alt^n(V))\qquad\text{given by}\qquad
+v_1\wedge\dots\wedge v_n\mapsto Tv_1\wedge\dots\wedge Tv_n.\]
+But since \(\Alt^n(V)\) is 1 dimensional, this map must be
+multiplication by some scalar, i.e. we have
+\[\Lambda^nT(v_1\wedge\dots\wedge v_n) = D(v_1\wedge\dots\wedge v_n)\]
+for some \(D\in\mathbf F\). We define the determinant of \(T\)
+(denoted \(\det T\)) to be this scalar \(D\).
+</li>
+<li>
+There is a natural isomorphism \(\gamma:\End(V)\to V\otimes V^*\).
+We can thus define the trace of \(T\in\End(V)\) as follows:
+let \(\gamma T = \sum_iv_i\otimes\alpha_i\in V\otimes V^*\).
+Then
+\[\tr\;T := \sum_i\alpha_i(v_i)\]
+</li>
+<li>
+Tensor product is adjoint to Hom:
+\[\Hom(U\otimes V, W)\simeq\Hom(U,\Hom(V, W)).\]
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="ii">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>groups</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+<a knowl="defs/gp/group">Groups</a>
+are the simplest algebraic structures with enough complexity
+to be interesting.
+</li>
+<li>
+The set \(\{\id_G\}\) is a group, known as the
+<a knowl="facts/gp/triv">trivial group</a>.
+</li>
+<li>Every cyclic group is an abelian group.</li>
+<li>Subgroups of cyclic groups are cyclic.</li>
+<li>(Lagrange) The order of a subgroup \(H\) of a finite group \(G\)
+divides the order of \(G\).</li>
+<li>
+Modding out by a normal subgroup produces a quotient group.
+</li>
+<li>
+Every group homomorphism decomposes into a epimorphism
+followed by an isomorphism followed by a monomorphism.
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="iii">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>rings</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>A ring is an additive group
+in which one can multiply elements.</li>
+<ul>
+<li>Every domain is a ring; every field is a domain.</li>
+<li>One can form modules and algebras over a ring.
+A vector space is a module over a field.</li>
+</ul>
+<li>The set \(\{0\}\) is a ring, known as the zero ring.</li>
+<li>Rings have subrings and ideals.
+Modding out by an ideal produces a quotient ring.</li>
+<li>Domains are to prime ideals as fields are to maximal ideals.</li>
+<li>Every ring homomorphism decomoses into
+an epimorphism followed by an isomorphism
+followed by a monomorphism.</li>
+<li>The Chinese Remainder Theorem
+is the first local-global principle.</li>
+<li>Every domain has a set of localizations at each prime,
+the largest of which is its field of fractions.</li>
+<li>Closely related to prime ideals and maximal ideals are
+prime elements and irreducible elements.</li>
+<li>There are several types of rings between domains and fields.</li>
+<ul>
+<li>Every field is a Euclidean domain.</li>
+<li>Every Euclidean domain is a PID.</li>
+<li>Every PID is a Noetherian domain
+in which primes are irreducible.</li>
+<li>Every Noetherian domain in which
+primes are irreducible is a UFD.</li>
+<li>Every UFD is an domain.</li>
+</ul>
+<li>
+Given a ring \(R\), one can form the polynomial ring over \(R\).
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="iv">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>modules and algebras</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>Modules are an abstract approach to linear algebra.</li>
+<ul>
+<li>A vector space is a module over a field.
+</li>
+<li>
+An abelian group is a module over the integers.
+</li>
+<li>
+A module over the polynomial ring \(k[X]\) is the same thing
+as a vector space with a linear map.
+</li>
+</ul>
+<li>
+One can form submodules and quotient modules.
+</li>
+<li>
+\(\mathbf C\) as an \(\mathbf R\)-algebra is the archetypal
+algebra over a ring.
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="v">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>extensions of fields</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+If \(\varphi:F\to E\) is a ring homomorphism where \(F\) is a field
+and \(E\) is a nonzero ring, then \(\varphi\) is injective.
+</li>
+<li>
+We tend to think of such homomorphisms as extensions,
+denoted \(E/F\), for example, or sometimes \(E\supset F\).
+</li>
+<li>
+Note that \(E\) is a vector space over \(F\).
+The dimension of this vector space
+is called the degree of the extension, denoted \([E:F]\).
+</li>
+<li>
+If \(K\supset E\supset F\) is a tower of fields, then
+\[[K:F] = [K:E][E:F].\]
+</li>
+<li>
+Automorphisms of an extension \(E/F\) form a group, denoted
+\(\Aut(E/F)\).
+</li>
+<li>
+There exists exactly one finite field up to isomorphism for
+each prime power.
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="vi">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>representations of finite groups and algebras</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+Representations allow us to use the tools of module theory 
+to study algebras and finite groups.
+</li>
+<li>
+One can think of a representation of a finite group \(G\) as either
+a vector space \(V\) equipped with a homomorphism
+\[\rho:G\to\GL_n(V)\]
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+</body>
+</html>
