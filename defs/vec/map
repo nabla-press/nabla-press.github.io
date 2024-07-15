@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script></head>
+
 <body>
 <p>
-Here are some properties of <a knowl="defs/linear-map.html">linear maps</a>.
+Here are some properties of <a knowl="defs/vec/map">linear maps</a>.
 \(\def\id{\text{id}}\)
 </p>
 <p>
@@ -11,14 +11,14 @@ Let \(U, V, W\) be vector spaces over a given field \(\mathbf F\).
 </p>
 <ol>
 <li>If \(T:V\to W\) is a linear map,
-then \[T(0_V) = 0_W.\]
+then \[T0_V = 0_W.\]
 <details>
 <summary>
 [explantion]
 </summary>
 Let \(v\in V\). Then
 \[\begin{align*}
-T(0_V) &= T(v + (-v)) = Tv + T(-v)\\
+T0_V &= T(v + (-v)) = Tv + T(-v)\\
 &= Tv + T((-1)v) = Tv + (-1)Tv = Tv + (-Tv) = 0_W.
 \end{align*}
 \]

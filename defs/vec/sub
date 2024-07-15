@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head><script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script></head>
 <body>
 <p>
-Facts about <a knowl="defs/linear-subspace.html">subspaces</a>.
+Facts about <a knowl="defs/vec/sub">subspaces</a>.
 </p>
 <ul>
 <li>
@@ -74,7 +73,7 @@ Notice that \(\{0\}\) and \(V\) are both subsets of \(V\).
 </p>
 <p>
 We checked that \(\{0\}\) is a
-vector space <a knowl="misc/trivial-space.html">here</a>,
+vector space <a knowl="facts/vec/trivial">here</a>,
 and \(V\) is a vector space by assumption.
 </p>
 </details>

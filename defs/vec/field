@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script></head>
+
 <body>
 <p>
-The following are consequences of the <a knowl="defs/field.html">field axioms</a>:
+The following are consequences of the <a knowl="defs/vec/field">field axioms</a>:
 <ol>
 <li>
 The additive identity 0 and multiplicative identity 1 are unique.
