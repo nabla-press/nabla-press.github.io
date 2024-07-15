@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+The <b>trivial group</b> is the set
+\(\{\id_G\}\) with the operation \(\circ(\id_G, \id_G)
+= \id_G\circ\id_G = \id_G\).
+</p>
+<p>
+This forms a group.
+<details>
+<summary>
+[explanation]
+</summary>
+We check the definition:
+<ol>
+<li>
+Associativity of \(\circ\):
+\(\id_G\circ(\id_G\circ\id_G)
+= \id_G\circ\id_G
+= (\id_G\circ\id_G)\circ\id_G\).
+</li>
+<li>
+Identity: \(\id_G = \id_G\circ\id_G = \id_G\).
+</li>
+<li>
+Inverses: \(\id_G = \id_G\circ\id_G = \id_G\).
+</li>
+</ol>
+</details>
+</p>
+</body>
+</html>

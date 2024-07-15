@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Consequences of the group definition. Let \(G\) be a group.
+</p>
+<ol>
+<li>Since groups are monoids,
+the identity element \(\id_G\) is unique.
+</li>
+<li>
+Let \(g\in G\). Then \(g\) has a unique inverse.
+<details>
+<summary>
+[explanation]
+</summary>
+Suppose \(h\) and \(k\) were inverses of \(g\).
+Then
+\[h = h\circ\id_G = h\circ(g\circ k)
+= (h\circ g)\circ k = \id_G\circ k = k.\]
+</details>
+</li>
+<li>
+Let \(g\in G\). The map \(\ell_g:G\to G\) given by
+\(\ell_g(h) = g\circ h\) is a bijection.
+<details>
+<summary>
+[explanation]
+</summary>
+To show \(\ell_g\) is injective,
+suppose \(\ell_g(h) = \ell_g(k)\).
+Then \(g\circ h = g\circ k\),
+hence \(g\inv\circ (g\circ h) = g\inv\circ (g\circ k)\),
+hence \((g\inv\circ g)\circ h = (g\inv\circ g)\circ k\),
+hence \(\id_G\circ h = \id_G\circ k\),
+hence \(h = k\).
+<br>
+To show \(\ell_g\) is surjective, let \(h\in G\),
+and let \(k = g\inv\circ h\). Then \[\ell_g(k) = g\circ (g\inv\circ h)
+ = (g\circ g\inv)\circ h = \id_G\circ h = h.\]
+Since \(\ell_g\) is both injective and surjective, it is also bijecitve.
+</details>
+</li>
+<li>
+Let \(g\in G\). The map \(r_g:G\to G\) given by
+\(r_g(h) = h\circ g\) is a bijection.
+<details>
+<summary>
+[explanation]
+</summary>
+To show \(r_g\) is injective, suppose \(r_g(h) = r_g(k)\).
+Then \(h\circ g = k\circ g\),
+hence \((h\circ g)\circ g\inv = (k\circ g)\circ g\inv\),
+hence \(h\circ (g\circ g\inv) = k\circ (g\circ g\inv)\),
+hence \(h\circ\id_G = k\circ\id_G\),
+hence \(h = k\).
+<br>
+To show \(r_g\) is surjective,
+let \(h\in G\), and let \(k = h\circ g\inv\).
+Then
+\[r_g(k) = (h\circ g\inv)\circ g = h\circ(g\inv\circ g)
+= h\circ\id_G = h.\]
+Since \(r_g\) is both injective and surjective, it is also bijecitve.
+</details>
+
+</li>
+
+</ol>
+</body>
+</html>
