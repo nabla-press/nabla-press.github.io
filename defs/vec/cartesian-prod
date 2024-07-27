@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(\{V_i\}_{i=1}^n\) be a finite set of vector spaces.
+</p>
+<p>
+The <b>Cartesian product</b> of these spaces is
+\[\prod_{i=1}^nV_i := \{(v_1,\dots, v_n):v_i\in V_i\}.\]
+</p>
+<p>
+This forms a <a knowl="defs/vec/space">vector space</a>.
+<details>
+<summary>
+[explanation]
+</summary>
+Define an addition of elements componentwise:
+\[(v_1,\dots, v_n) + (w_1,\dots, w_n)
+:= (v_1 + w_1,\dots, v_n + w_n).\]
+Similarly, define componentwise scalar multiplication:
+\[\lambda(v_1,\dots, v_n) := (\lambda v_1,\dots,\lambda v_n)\]
+We now check the axioms.
+<ol>
+<li>
+Addition is associative:
+\[
+\begin{align*}
+(a_1,\dots,a_n) + ((b_1,\dots,b_n) + (c_1,\dots,c_n))
+&= (a_1 + (b_1 + c_1),\dots,a_n + (b_n + c_n))\\
+&= ((a_1 + b_1) + c_1,\dots,(a_n + b_n) + c_n)\\
+&= ((a_1,\dots, a_n) + (b_1,\dots,b_n)) + (c_1,\dots,c_n)
+\end{align*}
+\]
+</li>
+<li>
+There is an additive identity:
+\[(a_1,\dots,a_n) + (0,\dots,0)
+= (a_1 + 0,\dots, a_n + 0) = (a_1,\dots,a_n)\]
+\[(0,\dots,0) + (a_1,\dots,a_n)
+= (0 + a_1,\dots, 0 + a_n) = (a_1,\dots,a_n)\]
+</li>
+<li>
+Additive inverses exist:
+\[(a_1,\dots,a_n) + (-a_1,\dots,-a_n) = (0,\dots,0)\]
+</li>
+<li>
+Addition is commutative:
+\[
+\begin{align*}
+(a_1,\dots,a_n) + (b_1,\dots,b_n) &= (a_1 + b_1,\dots,a_n + b_n)\\
+&= (b_1 + a_1,\dots,b_n + a_n)\\
+&= (b_1,\dots,b_n) + (a_1,\dots,a_n).
+\end{align*}
+\]
+</li>
+<li>
+Scalar identity:
+\[1(a_1,\dots,a_n) = (1a_1,\dots,1a_n)
+= (a_1,\dots,a_n).\]
+</li>
+<li>
+Compatibility with scalar multiplication:
+\[
+\begin{align*}
+\alpha(\beta(x_1,\dots,x_n)) &= \alpha(\beta x_1,\dots,\beta x_n)\\
+&= (\alpha(\beta x_1),\dots,\alpha(\beta x_n))\\
+&= ((\alpha\beta)x_1,\dots,(\alpha\beta)x_n)\\
+&= (\alpha\beta)(x_1,\dots,x_n).
+\end{align*}
+\]
+</li>
+<li>
+Distributive law:
+\[
+\begin{align*}
+\alpha((x_1,\dots,x_n) + (y_1,\dots,y_n))
+&= (\alpha(x_1 + y_1),\dots,\alpha(x_n + y_n))\\
+&= (\alpha x_1 + \alpha y_1,\dots,\alpha x_n + \alpha y_n)\\
+&= (\alpha x_1,\dots,\alpha x_n) + (\alpha y_1,\dots,\alpha y_n)\\
+&= \alpha(x_1,\dots,x_n) + \alpha(y_1,\dots, y_n),\\[1em]
+(\alpha + \beta)(x_1,\dots,x_n)
+&= ((\alpha + \beta)x_1,\dots,(\alpha + \beta)x_n)\\
+&= (\alpha x_1 + \beta x_1, \dots,\alpha x_n + \beta x_n)\\
+&= (\alpha x_1,\dots,\alpha x_n) + (\beta x_1,\dots,\beta x_n)\\
+&= \alpha(x_1,\dots,x_n) + \beta(x_1,\dots,x_n).
+\end{align*}
+\]
+</li>
+</ol>
+</details>
+</p>
+<p>
+Furthermore if there exists a vector space
+\(W\) such that \(V_i\subseteq W\)
+for each \(V_i\),
+then there is an isomorphism
+\[\Phi:\prod_{i=1}^nV_i\to\bigoplus_{i=1}^nV_i\]
+given by
+\[(v_1,\dots,v_n)\mapsto v_1 + \cdots + v_n.\]
+</p>
+</body>
+</html>

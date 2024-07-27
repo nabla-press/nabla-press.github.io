@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(V\) be a vector space.
+</p>
+<p>
+By the universal property of the tensor product, the bilinear map
+\[\widetilde\ev:V\times V^*\to\mathbf F\]
+given by \((v, \alpha)\mapsto\alpha v\)
+induces a unique linear map
+\[\ev:V\otimes V^*\to\mathbf F\]
+called the <b>evaluation map</b>.
+</p>
+<p>
+The <b>coevaluation map</b>
+\[\coev:\mathbf F\to V\otimes V^*\]
+is defined to be the dual of the
+evaluation map. Explicitly, the coevaluation map is given by
+\[\coev(1) = \sum_{i=1}^ne_i\otimes\pi^i\]
+and extended linearly,
+where \(\{e_i\}_{i=1}^n\) is the standard basis
+and \(\{\pi^i\}_{i=1}^n\) is the dual basis.
+</p>
+<p>
+This definition is actually basis-independent.
+<details>
+<summary>
+[explanation]
+</summary>
+</details>
+</p>
+<p>
+The evaluation and coevaluation maps satisfy
+the <a knowl="facts/vec/zigzag">zig-zag identities</a>.
+</p>
+</body>
+</html>

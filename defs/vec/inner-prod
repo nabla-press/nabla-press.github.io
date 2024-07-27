@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(V\) be a vector space
+over either \(\mathbf R\) or \(\mathbf C\).
+</p>
+<p>
+An <b>inner product</b> of \(V\) is a function
+\(\langle\cdot,\cdot\rangle:V\times V\to\mathbf F\)
+such that:
+<ol>
+<li>
+The function is conjugate-symmetric:
+\[\langle x, y\rangle = \overline{\langle y, x\rangle}.\]
+</li>
+<li>
+The function is linear in the first argument:
+\[\langle\alpha x + \beta y, z\rangle
+= \alpha\langle x, z\rangle + \beta\langle y, z\rangle.\]
+</li>
+<li>
+If \(x\ne 0\), then
+\[\langle x, x\rangle = 0.\]
+</li>
+</ol>
+</p>
+<p>
+An <b>inner product space</b> is a vector space
+\(V\) with an inner product.
+</p>
+<p>
+Related: facts about inner product spaces.
+</p>
+</body>
+</html>

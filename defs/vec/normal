@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+An endomorphism \(T\in\End(V)\) is <b>normal</b> if and only if
+\(TT^\dagger = T^\dagger T\).
+</p>
+<p>
+That is, an endomorphism is normal if and only if it commutes with
+its <a knowl="defs/vec/hermitian-adjoint">Hermitian adjoint</a>.
+</p>
+</body>
+</html>

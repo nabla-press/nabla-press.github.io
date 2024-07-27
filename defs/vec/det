@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+The map \(T\in\End(V)\) induces a linear map
+\[\Lambda^nT\in\End(\Alt^n(V))\qquad\text{given by}\qquad
+v_1\wedge\dots\wedge v_n\mapsto Tv_1\wedge\dots\wedge Tv_n.\]
+Here, \(\Alt^n(V)\) is the \(n\)th
+<a knowl="defs/vec/alt-alg">alternating power</a>.
+</p>
+<p>
+Since \(\Alt^n(V)\) is 1 dimensional, this map must be
+multiplication by some scalar, i.e. we have
+\[\Lambda^nT(v_1\wedge\dots\wedge v_n) = D(v_1\wedge\dots\wedge v_n)\]
+for some \(D\in\mathbf F\). We define the <b>determinant</b> of \(T\)
+(denoted \(\det T\)) to be this scalar \(D\).
+</p>
+<p>
+Related: <a knowl="facts/vec/det">facts about the determinant</a>.
+</p>
+</body>
+</html>

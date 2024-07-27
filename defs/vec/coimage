@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(T:V\to W\) be a linear map.
+</p>
+<p>
+The <b>coimage</b> of \(T\), denoted \(\coim\,T\), is the quotient
+space \(V/\ker T\).
+</p>
+<p>
+We have that \(T\) is injective if and only if \(V = \coim\,T\).
+</p>
+</body>
+</html>

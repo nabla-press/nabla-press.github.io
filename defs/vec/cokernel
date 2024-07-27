@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(T:V\to W\) be a linear map.
+</p>
+<p>
+The <b>cokernel</b> of \(T\), denoted \(\coker\,T\),
+is the quotient space \(W/\im\,T\).
+</p>
+<p>
+We have that \(T\) is surjective if and only if \(\coker\,T = \{0\}\).
+</p>
+</body>
+</html>

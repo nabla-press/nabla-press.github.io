@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+The <b>tensor algebra</b> \(T^\bullet(V)\)
+is:
+\[T^\bullet(V) := \bigoplus_{k\ge 0}T^k(V)\]
+where \(T^0(V) = \mathbf F,\; T^1(V) = V,\;
+T^2(V) = V\otimes V,\;
+T^3(V) = V\otimes V\otimes V,\;\dots\)
+</p>
+<p>
+Here, \(\otimes\) is the
+<a knowl="defs/vec/tensor-prod">tensor product</a>.
+</p>
+<p>
+Related: <a knowl="defs/vec/alt-alg">alternating algebra</a>.
+</p>
+</body>
+</html>

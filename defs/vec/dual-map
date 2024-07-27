@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(T:V\to W\) be a linear map.
+</p>
+<p>
+The <b>dual map</b> of \(T\) is the linear map
+\[T^*:W^*\to V^*\]
+such that \(T^*\alpha = \alpha T\) for all \(\alpha\in W^*\).
+Here, \(W^*\) and \(V^*\)
+denote the <a knowl="defs/vec/dual">dual spaces</a> of
+\(W\) and \(V\) respectively.
+</p>
+</body>
+</html>

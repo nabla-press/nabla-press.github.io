@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+The <b>alternating algebra</b> \(\Alt^\bullet(V)\)
+(where \(V\) has dimension \(n\)) is
+\[\Alt^\bullet(V) := \bigoplus_{k= 0}^n\Alt^k(V)\]
+where \(\Alt^0(V) = \mathbf F,\;\Alt^1(V) = V,\;
+\Alt^k(V) = \{x_1\wedge\cdots\wedge x_k : x_i\in V\}\) are the
+<b>alternating powers</b> of \(V\).
+</p>
+<p>
+Here, \(\wedge\) is the <a knowl="defs/vec/wedge">wedge product</a>.
+</p>
+<p>
+Related: <a knowl="defs/vec/tensor-alg">tensor algebra</a>.
+</p>
+</body>
+</html>

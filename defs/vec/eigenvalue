@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(V\) be a vector space over a field \(\mathbf F\)
+(which is either \(\mathbf R\) or \(\mathbf C\))
+and let \(T\in\End(V)\).
+</p>
+<p>
+A scalar \(\lambda\in\mathbf F\) is called an <b>eigenvalue</b>
+of \(T\) if
+\[T - \lambda\,\id_V\]
+is not injective.
+</p>
+</body>
+</html>

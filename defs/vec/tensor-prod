@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(\{V_i\}_{i = 1}^n\) be a finite set of vector spaces.
+</p>
+<p>
+A map 
+\[\phi:\prod_{i = 1}^nV_i\to W\]
+is <b>\(n\)-linear</b> if
+\[
+\begin{align*}
+\phi(\alpha x_1 + \beta y_1, z_2,\dots,z_n)
+&= \alpha\phi(x_1,z_2,\dots,z_n) + \beta\phi(y_1,z_2,\dots,z_n)\\
+\phi(z_1, \alpha x_2 + \beta y_2,\dots,z_n)
+&= \alpha\phi(z_1, x_2,\dots,z_n) + \beta\phi(z_1,y_2,\dots,z_n)\\
+&\;\,\vdots\\
+\phi(z_1,z_2,\dots,\alpha x_n + \beta y_n)
+&= \alpha\phi(z_1, z_2,\dots,x_n) + \beta\phi(z_1,z_2,\dots,y_n)
+\end{align*}
+\]
+i.e. if it is linear in every coordinate.
+</p>
+<p>
+The free vector space
+\(\mathbf F\left[\prod_{i=1}^nV_i\right],\)
+which has basis \(\prod_{i=1}^nV_i\),
+has a subspace \(R = \Span(X)\) where
+\[X = \{
+(\alpha x_1 + \beta y_1,z_2,\dots,z_n)
+- \alpha(x_1,z_2,\dots,z_n) - \beta(y_1,z_2,\dots,z_n),\\
+(z_1, \alpha x_2 + \beta y_2,\dots,z_n)
+- \alpha(z_1,x_2,\dots,z_n) - \beta(z_1,y_2,\dots,z_n),\\
+\dots,\\
+(z_1,z_2,\dots, \alpha x_n + \beta y_n)
+- \alpha(z_1,z_2,\dots,x_n) - \beta(z_1,z_2,\dots,y_n)
+: \alpha, \beta\in\mathbf F,\;x_i,y_i,z_i\in V_i\}\]
+</p>
+<p>
+The <b>tensor product</b> of the vector spaces \(V_1,\dots,V_n\)
+is then the quotient space
+\[\bigotimes_{i=1}^nV_i := \mathbf F\left[\prod_{i=1}^nV_i\right]\big/R.\]
+</p>
+<p>
+Consider the map \(\tau:\prod_{i=1}^nV_i\to\bigotimes_{i=1}^nV_i\)
+given by \((v_1,\dots,v_n)\mapsto(v_1,\dots,v_n) + R\).
+</p>
+<p>
+We have that \(\tau\) is \(n\)-linear.
+<details>
+<summary>
+[explanation]
+</summary>
+</details>
+</p>
+<p>
+<i>The tensor product \(\bigotimes_{i=1}^nV_i\)
+and its associated map \(\tau\)
+have the following universal property:</i>
+<br>
+for any \(n\)-linear map \(\phi:\prod_{i = 1}^nV_i\to W\)
+there exists a unique linear map \(\widetilde\phi:\bigotimes_{i=1}^nV_i\to W\)
+such that \(\phi = \widetilde\phi\tau\).
+<center>
+<img width="250px" src="diagrams/tensor-product.svg">
+</center>
+</p>
+<p>
+Related: <a knowl="facts/vec/tensor">facts about the tensor product</a>.
+</p>
+</body>
+</html>

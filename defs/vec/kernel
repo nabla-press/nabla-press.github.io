@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(T:V\to W\) be a <a knowl="defs/vec/map">linear map</a>.
+</p>
+<p>
+The <b>kernel</b> of \(T\), denoted \(\ker T\),
+is the set of all \(v\in V\) such that \(Tv = 0\).
+</p>
+<ul>
+<li>
+This forms a subspace of \(V\).
+<details>
+<summary>
+[explanation]
+</summary>
+Let \(\alpha, \beta\in\mathbf F\) and \(u, v\in\ker T\).
+Then
+\[T(\alpha u + \beta v) = \alpha Tu + \beta Tv = 0 + 0 = 0,\]
+so \(\alpha u + \beta v\in\ker T\).
+</details>
+</li>
+<li>
+The map \(T\) is injective if and only if \(\ker T = \{0\}\).
+<details>
+<summary>
+[explanation]
+</summary>
+<p>
+Suppose \(T\) is injective, i.e. suppose for all \(u, v\in V\)
+that
+\[Tu = Tv\implies u = v.\]
+Let \(v\in\ker T\). Then \(Tv = 0 = T0\), which implies \(v = 0\),
+so \(\ker T = \{0\}\).
+</p>
+<p>
+Conversely, suppose \(\ker T = \{0\}\),
+and let \(u, v\in V\) with \(Tu = Tv\).
+Then \(T(u - v) = Tu - Tv = 0\), hence \(u - v\in\ker T\),
+hence \(u - v = 0\), hence \(u = v\), so \(T\) is injective.
+</p>
+</details>
+</li>
+</ul>
+</body>
+</html>

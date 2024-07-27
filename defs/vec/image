@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(T:V\to W\) be a
+<a knowl="defs/vec/map">linear map</a>.
+</p>
+<p>
+The <b>image</b> of \(T\), denoted \(T(V)\) or \(\im\, T\),
+is the set of all \(Tv\in W\).
+</p>
+<ul>
+<li>
+This forms a subspace of \(W\).
+<details>
+<summary>
+[explanation]
+</summary>
+Let \(\alpha,\beta\in\mathbf F\) and \(Tu, Tv\in T(V)\).
+Then \(u, v\in V\), hence \(\alpha u + \beta v\in V\),
+hence \(T(\alpha u + \beta v)\in T(V)\).
+</details>
+</li>
+<li>
+A map \(T\) is surjective if and only if \(T(V) = W\).
+</li>
+</ul>
+</body>
+</html>

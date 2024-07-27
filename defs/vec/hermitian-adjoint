@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(T:V\to W\) be a linear map where \(V\) and \(W\)
+are both inner product spaces.
+</p>
+<p>
+The <b>Hermitian adjoint</b> of \(T\) is the unique linear map
+\(T^\dagger : W\to V\) such that
+\[\langle Tx, y\rangle_W = \langle x, T^\dagger y\rangle_V.\]
+for all \(x\in V\) and \(y\in W\).
+</p>
+<p>
+If \(\rho_V:V\to V^*\) and \(\rho_W:W\to W^*\) denote
+the antilinear bijectins produced by the Riesz representation theorem,
+then \[\rho_VT^\dagger = T^*\rho_W\] as linear maps,
+where \(T^*:W^*\to V^*\) is the
+<a knowl="defs/vec/dual-map">dual map</a> of \(T\).
+</p>
+</body>
+</html>

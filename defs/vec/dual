@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(V\) be a vector space over a field \(\mathbf F\).
+</p>
+<p>
+The <b>dual space</b> is
+\[V^* := \Hom(V, \mathbf F).\]
+Elements of the dual space are called <i>linear functionals</i>.
+</p>
+<p>
+Related: <a knowl="facts/vec/dual">facts about the dual space</a>.
+</p>
+</body>
+</html>

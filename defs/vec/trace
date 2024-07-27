@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(T\in\End(V)\) be a linear map.
+The <b>trace</b> of \(T\) is defined as follows
+(expressing composition explicitly for clarity):
+\[\tr\,T = \ev\circ(T\otimes\id_{V^*})\circ\coev(1).\]
+If we express the coevaluation map in terms of the standard basis
+\(\{e_i\}_{i=1}^n\) and the dual basis \(\{\pi^i\}_{i=1}^n\),
+we get
+\[\tr\,T = \ev\left(\sum_{i=1}^nTe_i\otimes\pi^i\right)
+= \sum_{i=1}^n\pi^iTe_i.\]
+</p>
+</body>
+</html>

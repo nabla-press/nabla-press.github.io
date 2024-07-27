@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Let \(V\) and \(W\) be vector spaces.
+Denote by \(\Hom(V, W)\) the set of <a knowl="defs/vec/map">linear maps</a> from \(V\) to \(W\).
+<ul>
+<li>
+<a knowl="facts/vec/hom">This forms a vector space.</a>
+</li>
+<li>
+If \(V = W\), we denote \(\Hom(V, W)\) by \(\End(V)\).
+</li>
+<li>
+We have \(V\simeq\Hom(\mathbf F, V)\).
+<details>
+<summary>
+[explanation]
+</summary>
+Let \(\Phi:V\to\Hom(\mathbf F, V)\) be given by
+\(v\mapsto(\lambda\mapsto\lambda v)\). This map is linear:
+[iou]
+</details>
+</li>
+<li>
+The set of automorphisms of \(V\) (bijective linear maps
+from \(V\) to \(V\)) is denoted \(\Aut(V)\).
+</li>
+<li>
+If \(W = \mathbf F\), we denote \(\Hom(V, W)\) by \(V^*\)
+and call this space the <a knowl="defs/vec/dual">dual space</a> of \(V\).
+</li>
+</ul>
+</p>
+</body>
+</html>
