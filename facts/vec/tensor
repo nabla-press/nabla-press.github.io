@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Facts about the <a knowl="def/vec/tensor-product">tensor product</a>.
+</p>
+<ul>
+<li>
+The tensor product is commutative:
+\(V\otimes W\simeq W\otimes V\).
+<details>
+<summary>
+[explanation]
+</summary>
+Define a bilinear map \(\varphi:V\times W\to W\otimes V\) via
+\((v, w)\mapsto w\otimes v\). By the universal property of the tensor
+product, there exists a unique linear map
+\[\widetilde\varphi:V\otimes W\to W\otimes V.\]
+Similarly, define a bilinear map \(\psi:W\times V\to V\otimes W\)
+via \((w, v)\mapsto v\otimes w\). By the universal property of the 
+tensor product, there exists a unique linear map
+\[\widetilde\psi:W\otimes V\to V\otimes W.\]
+These maps are clear inverses of each other,
+which means that \(V\otimes W\) and \(W\otimes V\) are isomorphic.
+</details>
+</li>
+<li>
+The tensor product is associative:
+\(A\otimes(B\otimes C)\simeq (A\otimes B)\otimes C\).
+<details>
+<summary>
+[explanation]
+</summary>
+</details>
+</li>
+<li>
+The \(\otimes\) functor is adjoint to the Hom functor:
+\[\Hom(U\otimes V, W)\simeq\Hom(U,\Hom(V, W))\]
+<details>
+<summary>
+[explanation]
+</summary>
+</details>
+</li>
+<li>
+Tensor respects dual: \((U\otimes V)^*\simeq U^*\otimes V^*\).
+<details>
+<summary>
+[explanation]
+</summary>
+</details>
+</li>
+<li>
+\(\Hom(V, W)\simeq V^*\otimes W\).
+<details>
+<summary>
+[explanation]
+</summary>
+\[
+\begin{align*}
+\Hom(V, W) &\simeq\Hom(V, W^{**})\\
+&\simeq\Hom(V,\Hom(W^*, \mathbf F))\\
+&\simeq\Hom(V\otimes W^*,\mathbf F)\\
+&\simeq(V\otimes W^*)^*\\
+&\simeq V^*\otimes W.
+\end{align*}
+\]
+</details>
+</li>
+<li>
+\(\Hom(U, V\otimes W)\simeq\Hom(U, V)\otimes W\).
+<details>
+<summary>
+[explanation]
+</summary>
+\[
+\begin{align*}
+\Hom(U, V\otimes W) &\simeq U^*\otimes(V\otimes W)\\
+&\simeq (U^*\otimes V)\otimes W\\
+&\simeq \Hom(U, V)\otimes W.
+\end{align*}
+\]
+</details>
+</li>
+<li>
+\(\Hom(\Hom(U, V), W)\simeq U\otimes\Hom(V, W)\).
+<details>
+<summary>
+[explanation]
+</summary>
+\[
+\begin{align*}
+\Hom(\Hom(U, V), W) &\simeq\Hom(U^*\otimes V, W)\\
+&\simeq (U^*\otimes V)^*\otimes W\\
+&\simeq (U\otimes V^*)\otimes W\\
+&\simeq U\otimes(V^*\otimes W)\\
+&\simeq U\otimes\Hom(V, W).
+\end{align*}
+\]
+</details>
+</li>
+<li>
+\(\Hom(A\otimes B, C\otimes D)\simeq\Hom(A, C)\otimes\Hom(B, D)\).
+<details>
+<summary>
+[explanation]
+</summary>
+\[
+\begin{align*}
+\Hom(A\otimes B, C\otimes D) &\simeq\Hom(A,\Hom(B, C\otimes D))\\
+&\simeq\Hom(A,\Hom(B, D\otimes C))\\
+&\simeq\Hom(A,\Hom(B, D)\otimes C)\\
+&\simeq\Hom(A, C\otimes\Hom(B, D))\\
+&\simeq\Hom(A, C)\otimes\Hom(B, D).
+\end{align*}
+\]
+</details>
+</li>
+</ul>
+</body>
+</html>

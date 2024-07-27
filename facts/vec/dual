@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Facts about the dual space.
+</p>
+<ul>
+<li>
+There exists a natural isomorphism from a vector space to its
+double dual:
+\[V\simeq V^{**}.\]
+<details>
+<summary>
+[explanation]
+</summary>
+Define the evaluation map \(\Gamma_v:V^*\to\mathbf F\)
+via \(\phi\mapsto\phi(v)\). Then the map \(\Psi:V\to V^{**}\) given
+by \(v\mapsto\Gamma_v\) is an isomorphism of vector spaces.
+</details>
+</li>
+</ul>
+</body>
+</html>

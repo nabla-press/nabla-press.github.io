@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+Facts about the determinant.
+</p>
+<ul>
+<li>
+The determinant is multiplictive:
+\[\det(AB) = (\det A)(\det B).\]
+<details>
+<summary>
+[explanation]
+</summary>
+The map \(\Lambda:\End(V)\to\End(\Alt^n(V))\) given by
+\(T\mapsto\Lambda^nT\) respects composition in the following way:
+\[
+\begin{align*}
+\Lambda^n(AB)
+&= (v_1\wedge\cdots\wedge v_n\mapsto (AB)v_1\wedge\cdots\wedge(AB)v_n)\\
+&= (v_1\wedge\cdots\wedge v_n\mapsto A(Bv_1)\wedge\cdots\wedge A(Bv_n))\\
+&= (v_1\wedge\cdots\wedge v_n\mapsto Av_1\wedge\dots\wedge Av_n)
+(v_1\wedge\cdots\wedge v_n\mapsto Bv_1\wedge\cdots\wedge Bv_n)\\
+&= (\Lambda^nA)(\Lambda^nB).
+\end{align*}
+\]
+The above equality then follows.
+</details>
+
+</li>
+<li>
+A map \(T\in\End(V)\) is invertible if and only if \(\det T\ne 0\).
+<details>
+<summary>
+[explanation]
+</summary>
+<p>
+Suppose \(T\) is invertible.
+Then \(T\inv\) exists and in particular \(\det(T\inv)\) exists,
+hence \((\det T)\inv\) exists, which implies \(\det T\ne 0\).
+</p>
+<p>
+We will show the converse by contrapositive. Suppose \(T\) is not
+invertible. Then in particular \(T\) is not injective, hence
+there is some nonzero vector \(v\in\ker T\). Let \(v = v_1\)
+and extend to a basis \(\{v_i\}_{i=1}^n\) for \(V\). Then
+\[\Lambda^nT(v_1\wedge\dots\wedge v_n) = 0\wedge\dots\wedge Tv_n = 0\]
+hence \(\det T = 0\).
+</p>
+</details>
+</li>
+</ul>
+</body>
+</html>

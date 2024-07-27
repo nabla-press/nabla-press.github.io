@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Facts about bases.</p>
+<ul>
+<li>
+Given a basis \(\{e_1,\dots,e_n\}\) of a vector space \(V\),
+there is exactly one way to express any \(v\in V\) as a
+linear combination of the \(e_i\).
+<details>
+<summary>
+[explanation]
+</summary>
+Recall that a basis of \(V\)
+is a linearly independent set that spans \(V\).
+Let \(v\in V\). Then since \(\Span(\{e_i\}) = V\),
+there is at least one way to express \(v\) as a linear combination
+of the \(e_i\). To see that there is at most one way to express
+\(v\) as a linear combination of the \(e_i\),
+let \(v = \sum_i\alpha_ie_i = \sum_i\beta_ie_i.\)
+Then
+\[\sum_i(\alpha_i - \beta_i)e_i = 0,\]
+which implies \(\alpha_i -\beta_i = 0\), hence \(\alpha_i = \beta_i\).
+</details>
+</li>
+<li>
+Every vector space has a basis.
+<details>
+<summary>
+[explanation]
+</summary>
+</details>
+</li>
+<li>
+Any two bases of a vector space \(V\)
+have the same number of elements.
+<details>
+<summary>
+[explanation]
+</summary>
+</details>
+</li>
+</ul>
+</body>
+</html>

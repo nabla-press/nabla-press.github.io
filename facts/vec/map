@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<p>
+Here are some properties of <a knowl="defs/vec/map">linear maps</a>.
+\(\def\id{\text{id}}\)
+</p>
+<p>
+Let \(U, V, W\) be vector spaces over a given field \(\mathbf F\).
+</p>
+<ol>
+<li>If \(T:V\to W\) is a linear map,
+then \[T0_V = 0_W.\]
+<details>
+<summary>
+[explantion]
+</summary>
+Let \(v\in V\). Then
+\[\begin{align*}
+T0_V &= T(v + (-v)) = Tv + T(-v)\\
+&= Tv + T((-1)v) = Tv + (-1)Tv = Tv + (-Tv) = 0_W.
+\end{align*}
+\]
+</details>
+</li>
+<li>
+If \(S:U\to V\) and \(T:V\to W\) are linear maps, then the composition
+\[TS:U\to W\]
+is also a linear map.
+<details>
+<summary>
+[explantion]
+</summary>
+Let \(\alpha, \beta\in\mathbf F\) and \(u, v\in U\). Then
+\[
+TS(\alpha u + \beta v)
+= T(\alpha Su + \beta Sv) = \alpha TS u + \beta TS v.
+\]
+</details>
+</li>
+<li>
+There exists an identity map \(\id_U:U\to U\) given by \(u\mapsto u\).
+This map is linear.
+<details>
+<summary>
+[explantion]
+</summary>
+Let \(\alpha, \beta\in\mathbf F\) and \(u, v\in U\). Then
+\[
+\id_U(\alpha u + \beta v) = \alpha u + \beta v
+= \alpha\,\id_U u + \beta\,\id_Uv.
+\]
+</details>
+Note that if \(S:U\to V\) is a linear map, then
+\[\id_VS = S = S\,\id_U.\]
+</li>
+<li>
+If \(T:V\to W\) and \(\widetilde T:V\to W\) are linear maps
+such that \[Tv = \widetilde Tv\] for all \(v\in V\),
+then \(T = \widetilde T\).
+</li>
+</ol>
+</body>
+</html>
