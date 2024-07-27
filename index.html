@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!--
+
+ _   _           _           __  __       _   _     
+| | | |_   _  __| |_ __ __ _|  \/  | __ _| |_| |__  
+| |_| | | | |/ _` | '__/ _` | |\/| |/ _` | __| '_ \ 
+|  _  | |_| | (_| | | | (_| | |  | | (_| | |_| | | |
+|_| |_|\__, |\__,_|_|  \__,_|_|  |_|\__,_|\__|_| |_|
+       |___/                                        
+
+"it's more fun to compute" -- Kraftwerk, 1980
+
+-->
+<title>HydraMath</title>
+
+<!-- MathJax -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/
+npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<!-- jquery -->
+<script type="text/javascript"
+src="https://code.jquery.com/jquery-latest.min.js"></script> 
+
+
+<!-- knowls -->
+<link href="https://aimath.org/knowlstyle.css"
+rel="stylesheet" type="text/css" /> 
+<script type="text/javascript"
+src="https://aimath.org/knowl.js"></script>
+
+<!-- for mobile viewing -->
+<meta name="viewport" content="width=100%, initial-scale=1.0">
+
+<!-- CSS -->
+<style>
+
+html {
+padding: 1cm;
+font-size: 1.2em;
+}
+details {
+border:2px solid #ccc;
+border-radius: 4px;
+background-color: #eee;
+margin: 0.5em;
+padding: 0.5em;
+}
+
+ol, ul {
+line-height: 1.5em;
+}
+
+hr {
+border: 2px solid #ddd;
+}
+
+a {
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+.container {
+            height:100%;
+            width: 70%;
+            margin: -140px 0 0 auto;
+			
+}
+</style>
+</head>
+<body>
+
+<!-- TeX definitions -->
+<h1 style="font-size: 2.5em">
+<i>HydraMath</i>
+\(
+\def\Hom{\text{Hom}}\def\End{\text{End}}
+\def\Aut{\text{Aut}}
+\def\Alt{\text{Alt}}
+\def\Sym{\text{Sym}}
+\def\im{\text{im}}
+\def\coim{\text{coim}}
+\def\coker{\text{coker}}
+\def\Span{\text{Span}}
+\def\LC{\text{LC}}
+\def\GL{\text{GL}}
+\def\id{\text{id}}
+\def\tr{\text{tr}}
+\def\ev{\text{ev}}
+\def\coev{\text{coev}}
+\def\inv{^{-1}}
+\def\To{\longrightarrow}
+\)
+</h1>
+<script 
+src="svg.min.js"></script>
+<script src="workflowChart.js"></script>
+<div class="container">
+    <div class="workflow">
+    </div>
+</div>
+<script type="text/javascript">
+$('.workflow').workflowChart({
+data: [
+{id: 1, title: 'vect',
+parent: null, optional: true, link: "#i"},
+{id: 2, title: 'group',
+parent: 1, optional: false, link: "#ii"},
+{id: 3, title: 'ring', parent: 2, optional: false, link: '#iii'},
+{id: 4, title: 'mod', parent: 3, optional: false, link: '#iv'},
+{id: 5, title: 'field', parent: 3, optional: true, link: '#v'},
+{id: 6, title: 'alg-NT', parent: 4, optional: false, link: '#vi'},
+{id: 7, title: 'repn', parent: 6, optional: false, link: '#vii'}
+]
+})
+</script>
+
+<!-- navigation 
+<p style="color: #bbb;"> <a href="#i">vector spaces</a>
+&#10132; <a href="#ii">groups</a>
+&#10132; <a href="#iii">rings</a>
+&#10132; <a href="#iv">modules and algebras</a>
+&#10132; <a href="#v">field extns</a>
+&#10132; <a href="#vi">repns</a>
+</p>
+
+-->
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+<p style="color: #b00">
+To do:
+<ol style="color: #b00">
+<li>
+Prove the following properties of the tensor product:
+<ul>
+<li>\(\Hom(U\otimes V, W)\simeq\Hom(U,\Hom(V, W))\)
+</li>
+<li>\((U\otimes V)^* = U^*\otimes V^*\)
+</li>
+</ul>
+</li>
+<li>
+Prove that every vector space has a basis (use Zorn's lemma).
+</li>
+<li>
+Prove that any two bases have the same size.
+</li>
+<li>
+Prove that for a subspace \(U\) of a vector space \(V\) that 
+\(\dim U\le\dim V\) and that \(\dim(V/U) = \dim V - \dim U\).
+</li>
+<li>
+Prove that for subspaces \(\{U_i\}_{i=1}^n\) of a vector space
+\(V\) that \(\dim\bigoplus_{i=1}^nU_i = \sum_{i=1}^n\dim U_i\).
+</li>
+<li>
+Prove that for vector spaces \(V\) and \(W\) that
+\(\dim(V\otimes W) = (\dim V)(\dim W)\).
+</li>
+<li>
+Define eigenvalues and (generalized) eigenvectors.
+</li>
+<li>
+Define inner product spaces.
+</li>
+</ol>
+</p>
+
+<section id="i">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>vector spaces</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+In linear algebra there are <i>vectors</i> and <i>scalars</i>.
+<ul>
+<li>
+A vector is an element of a
+<a knowl="defs/vec/space">vector space</a>
+over a given <a knowl="defs/vec/field">field</a>,
+</li>
+<li>
+whereas a scalar is an element of the field itself.
+</li>
+</ul>
+</li>
+<li>
+The set \(\{0\}\) is a vector space,
+known as the <a knowl="facts/vec/trivial">trivial space</a>.
+</li>
+<li>
+Any vector space \(V\) has a set of
+<a knowl="defs/vec/sub">subspaces</a>.
+<ul>
+<li>
+One can form 
+<a knowl="defs/vec/sum">direct sums</a>
+and <a knowl="defs/vec/quotient">quotients</a> of subspaces.
+</li>
+</ul>
+</li>
+<li>
+Any nonempty subset \(X\) of a vector space \(V\) generates a subspace
+of \(V\), called the <a knowl="defs/vec/span">span</a> of \(X\).
+</li>
+<li>
+Every vector space has a <a knowl="defs/vec/basis">basis</a>,
+and hence a <a knowl="defs/vec/dim">dimension</a>.
+</li>
+<li>
+Given any two vector spaces \(V\) and \(W\), there is
+a nonempty <a knowl="defs/vec/hom-set">set of linear maps</a>,
+denoted \(\Hom(V, W)\).
+</li>
+<li>
+A linear map that is both
+<a knowl="facts/vec/injsurj">injective</a> and
+<a knowl="facts/vec/injsurj">surjective</a>
+is an isomorphism of vector spaces.
+<ul>
+<li>
+Injective maps preserve linearly independent sets,
+whereas surjective maps preserve spaning sets.
+</li>
+<li>
+Hence, isomorphisms preserve bases.
+</li>
+<li>
+There is an injective map \(T:V\to W\) if and only if
+\(\dim V\le\dim W\).
+</li>
+<li>
+There is a surjective map \(T:V\to W\) if and only if
+\(\dim V\ge\dim W\).
+</li>
+<li>
+If \(V\) is finite-dimensional,
+an injective endomorphism of \(V\) is also surjective
+(and vice versa).
+</li>
+</ul>
+</li>
+<li>Every linear map has a <a knowl="defs/vec/kernel">kernel</a>,
+an <a knowl="defs/vec/image">image</a>,
+a <a knowl="defs/vec/cokernel">cokernel</a>,
+and a <a knowl="defs/vec/coimage">coimage</a>.</li>
+<li>
+The
+<a knowl="facts/vec/universal-sub"
+>universal property of subspaces</a>
+is dual to the
+<a knowl="facts/vec/universal-quotient"
+>universal property of quotient spaces</a>.
+</li>
+<li>
+The direct sum satisfies both the universal property of products
+and the universal property of coproducts.
+</li>
+<li>
+The <a knowl="facts/vec/rank-nullity">rank-nullity theorem</a>
+is a corollary of
+<a knowl="facts/vec/first-iso">canonical decomposition</a>
+(also known as the <i>first isomorphism theorem</i>).
+</li>
+<li>
+For any linear map \(T:V\to W\) there is an exact sequence
+\[0\To\ker T\To V\To\coim\,T\To\im\,T\To W\To \coker\,T\To 0.\]
+</li>
+<li>
+Bilinear maps on the
+<a knowl="defs/vec/cartesian-prod">Cartesian product</a> \(V\times W\)
+are the same thing as linear maps on the
+<a knowl="defs/vec/tensor-prod">tensor product</a> \(V\otimes W\).
+</li>
+<li>
+Every vector space has an
+<a knowl="defs/vec/eval-pair">evaluation map
+and a coevaluation map</a>.
+</li>
+<li>
+Every endomorphism of a vector space has a
+<a knowl="defs/vec/trace">trace</a>
+and a <a knowl="defs/vec/det">determinant</a>.
+</li>
+<li>
+Every endomorphism of a complex vector space
+has at least one <a knowl="defs/vec/eigenvalue">eigenvalue</a>.
+<details>
+<summary>
+[explanation]
+</summary>
+<!-- proof due to sheldon axler -->
+Fix a nonzero vector \(v\in V\). Then the vectors
+\[v,\;Tv,\;T^2v,\;\dots,\;T^nv\]
+cannot be linearly independent (assume \(V\) has dimension \(n\)).
+<br>
+Thus there exist complex numbers
+\(a_0,\dots,a_n\) (not all zero) such that
+\[a_0v + a_1Tv + \cdots + a_nT^nv = 0.\]
+Since \(\mathbf C\) is algebraically closed,
+we have 
+\[a_0 + a_1z +\cdots + a_nz^n = c(z - r_1)\cdots(z - r_m)\]
+where \(c\) and \(r_i\) are complex with \(c\ne 0\).
+So then
+\[c(T - r_1\,\id_V)\cdots(T - r_m\,\id_V)v = 0,\]
+which means that \(T - r_j\,\id_V\) is not injective
+for at least one \(j\).
+</details>
+</li>
+<li>
+Every endomorphism of an odd-dimensional real vector space
+has at least one eigenvalue.
+</li>
+<li>
+The Cauchy-Schwarz inequality applies within every
+<a knowl="defs/vec/inner-prod">inner product space</a>.
+</li>
+<li>
+The idempotent endomorphisms of a vector space are its projections.
+</li>
+<li>
+The Riesz representation theorem naturally identifies an inner product
+space with its dual.
+</li>
+<li>
+The spectral theorem states that if \(T\in\End(V)\) is
+<a knowl="defs/vec/normal">normal</a>, then the eigenvectors of \(T\)
+form an orthonormal basis in \(V\).
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="ii">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>groups</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+<a knowl="defs/gp/group">Groups</a>
+are the simplest algebraic structures with enough complexity
+to be interesting.
+</li>
+<li>
+The set \(\{\id_G\}\) is a group, known as the
+<a knowl="facts/gp/triv">trivial group</a>.
+</li>
+<li>Every cyclic group is an abelian group.</li>
+<li>Subgroups of cyclic groups are cyclic.</li>
+<li>(Lagrange) The order of a subgroup \(H\) of a finite group \(G\)
+divides the order of \(G\).</li>
+<li>
+Modding out by a normal subgroup produces a quotient group.
+</li>
+<li>
+Every group homomorphism decomposes into a epimorphism
+followed by an isomorphism followed by a monomorphism.
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="iii">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>rings</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>A ring is an additive group
+in which one can multiply elements.</li>
+<ul>
+<li>Every domain is a ring; every field is a domain.</li>
+<li>One can form modules and algebras over a ring.
+A vector space is a module over a field.</li>
+</ul>
+<li>The set \(\{0\}\) is a ring, known as the zero ring.</li>
+<li>Rings have subrings and ideals.
+Modding out by an ideal produces a quotient ring.</li>
+<li>Domains are to prime ideals as fields are to maximal ideals.</li>
+<li>Every ring homomorphism decomoses into
+an epimorphism followed by an isomorphism
+followed by a monomorphism.</li>
+<li>The Chinese Remainder Theorem
+is the first local-global principle.</li>
+<li>Every domain has a set of localizations at each prime,
+the largest of which is its field of fractions.</li>
+<li>Closely related to prime ideals and maximal ideals are
+prime elements and irreducible elements.</li>
+<li>There are several types of rings between domains and fields.</li>
+<ul>
+<li>Every field is a Euclidean domain.</li>
+<li>Every Euclidean domain is a PID.</li>
+<li>Every PID is a Noetherian domain
+in which primes are irreducible.</li>
+<li>Every Noetherian domain in which
+primes are irreducible is a UFD.</li>
+<li>Every UFD is an domain.</li>
+</ul>
+<li>
+Given a ring \(R\), one can form the polynomial ring over \(R\).
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="iv">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>modules and algebras</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>Modules are an abstract approach to linear algebra.</li>
+<ul>
+<li>A vector space is a module over a field.
+</li>
+<li>
+An abelian group is a module over the integers.
+</li>
+<li>
+A module over the polynomial ring \(k[X]\) is the same thing
+as a vector space with a linear map.
+</li>
+</ul>
+<li>
+One can form submodules and quotient modules.
+</li>
+<li>
+\(\mathbf C\) as an \(\mathbf R\)-algebra is the archetypal
+algebra over a ring.
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="v">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>extensions of fields</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+If \(\varphi:F\to E\) is a ring homomorphism where \(F\) is a field
+and \(E\) is a nonzero ring, then \(\varphi\) is injective.
+</li>
+<li>
+We tend to think of such homomorphisms as extensions,
+denoted \(E/F\), for example, or sometimes \(E\supset F\).
+</li>
+<li>
+Note that \(E\) is a vector space over \(F\).
+The dimension of this vector space
+is called the degree of the extension, denoted \([E:F]\).
+</li>
+<li>
+If \(K\supset E\supset F\) is a tower of fields, then
+\[[K:F] = [K:E][E:F].\]
+</li>
+<li>
+Automorphisms of an extension \(E/F\) form a group, denoted
+\(\Aut(E/F)\).
+</li>
+<li>
+There exists exactly one finite field up to isomorphism for
+each prime power.
+</li>
+<li><i>From the module point of view:</i>
+Let \(L/K\) be an extension of fields with \(G = \Aut(L/K)\).
+Then \(L\) is a \(K[G]\)-module, and \[j:L[G]\to\End_K(L)\]
+is <i>injective</i> if and only if \(L/K\) is separable,
+<br>
+and <i>surjective</i> if and only if \(L/K\) is normal
+<br>
+(hence <i>bijective</i> if and only if \(L/K\) is Galois).
+</li>
+</ol>
+</section>
+
+
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="vi">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>algebraic number theory</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+An algebraic number is the root of a polynomial with
+integer coefficients.
+</li>
+<li>
+An algebraic integer is the root of a monic polynomial with
+integer coefficients.
+</li>
+<li>
+A number field is a finite extension of \(\mathbf Q\).
+</li>
+</ol>
+</section>
+
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+
+<section id="vii">
+<hr>
+<p style="color: #666; font-size: 1.5em;
+text-align: center;">
+<i>representations of finite groups and algebras</i>
+</p>
+<p>
+<a href="#top">(back to top)</a>
+</p>
+<ol>
+<li>
+Representations allow us to use the tools of module theory 
+to study algebras and finite groups.
+</li>
+<li>
+One can think of a representation of a finite group \(G\) as either
+a vector space \(V\) equipped with a homomorphism
+\[\rho:G\to\GL_n(V)\]
+</li>
+</ol>
+</section>
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+</body>
+</html>
